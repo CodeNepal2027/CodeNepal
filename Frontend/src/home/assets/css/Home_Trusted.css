@@ -1,0 +1,67 @@
+/* Home_Trusted.css */
+.home-trusted {
+    padding: 3rem 0;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.trusted-label {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.trusted-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.trusted-item {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.trusted-item:hover {
+    opacity: 1;
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .trusted-grid {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .trusted-item {
+        font-size: 0.9rem;
+    }
+}
