@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi'
 import Logo from '../utils/Logo'
 import './assets/css/Navbar.css'
 
 const Navbar = () => {
+    const navigate = useNavigate()
     const [isServicesOpen, setIsServicesOpen] = useState(false)
     const [isResourcesOpen, setIsResourcesOpen] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -33,13 +34,13 @@ const Navbar = () => {
     const handleServiceClick = (service) => {
         setIsServicesOpen(false)
         setIsMobileMenuOpen(false)
-        window.location.assign(service.path)
+        navigate(service.path)  // Using navigate for SPA navigation
     }
 
     const handleResourceClick = (resource) => {
         setIsResourcesOpen(false)
         setIsMobileMenuOpen(false)
-        window.location.assign(resource.path)
+        navigate(resource.path)  // Using navigate for SPA navigation
     }
 
     const closeMobileMenu = () => {
@@ -185,7 +186,7 @@ const Navbar = () => {
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/aws" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Products</Link>
+                        <Link to="/aws" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>AWS</Link>
                     </li>
                     
                     <li className="nav-item">
