@@ -1,0 +1,224 @@
+/* Product_Option.css */
+.product-options {
+    padding: 4rem 0 5rem;
+    background: var(--bg-secondary);
+}
+
+.options-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.options-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    background: rgba(59,130,246,0.1);
+    padding: 0.3rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 0.75rem;
+}
+
+.options-heading h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.options-heading p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.option-card {
+    background: var(--bg-primary);
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.option-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--option-color);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.option-card.active {
+    border-color: var(--option-color);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    background: rgba(59,130,246,0.02);
+}
+
+.option-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+}
+
+.option-card:hover .option-icon,
+.option-card.active .option-icon {
+    transform: scale(1.05);
+}
+
+.option-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.option-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.option-status {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.status-active {
+    color: var(--option-color);
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.status-inactive {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.option-card:hover .status-inactive {
+    color: var(--text-primary);
+}
+
+/* Sticky Options Bar */
+.sticky-options-bar {
+    position: fixed;
+    top: var(--navbar-height); /* Adjust based on your navbar height */
+    left: 0;
+    right: 0;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    z-index: 999;
+    padding: 0.5rem 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.sticky-options-bar.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.sticky-options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sticky-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.sticky-option:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.sticky-option.active {
+    color: var(--option-color);
+    background: rgba(59,130,246,0.05);
+}
+
+.sticky-option .sticky-icon {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.sticky-option .sticky-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.sticky-indicator {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: var(--option-color);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .options-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .sticky-options-grid {
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .sticky-option {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .sticky-option .sticky-title {
+        font-size: 0.7rem;
+    }
+
+    .sticky-option .sticky-icon {
+        font-size: 0.9rem;
+    }
+}
