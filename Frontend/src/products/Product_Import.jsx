@@ -9,9 +9,18 @@ import Product_Option from './components/Product_Option'
 import Product_Order from './components/Product_Order'
 import Product_Project from './components/Product_Project'
 
+// API 
+import Product_API_Context from './Product_API_Context'
+import Product_API_Fetch from './Product_API_Fetch'
+import Product_API_Provider from './Product_API_Provider'
+
 export{
     Product,
     Product_Route,
+
+    Product_API_Context,
+    Product_API_Provider,
+    Product_API_Fetch,
 
     Product_CTA,
     Product_Customize,
