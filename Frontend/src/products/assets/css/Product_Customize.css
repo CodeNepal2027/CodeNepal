@@ -1,0 +1,147 @@
+/* Product_Customize.css */
+.product-customize {
+    padding: 4rem 0 5rem;
+    background: var(--bg-primary);
+}
+
+.customize-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.customize-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    background: rgba(59,130,246,0.1);
+    padding: 0.3rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 0.75rem;
+}
+
+.customize-info h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.customize-info > p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.customize-points {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.point {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+}
+
+.point i {
+    font-size: 1.2rem;
+    color: #10b981;
+    margin-top: 0.1rem;
+}
+
+.point strong {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.point p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.customize-form {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.customize-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.customize-form .form-group label {
+    display: block;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.customize-form .form-group input,
+.customize-form .form-group select,
+.customize-form .form-group textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.customize-form .form-group input:focus,
+.customize-form .form-group select:focus,
+.customize-form .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.customize-form .form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    gap: 0.8rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 968px) {
+    .customize-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .customize-form {
+        padding: 1.5rem;
+    }
+}

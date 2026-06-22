@@ -1,8 +1,13 @@
-/* Home.css - Global styles for Home page */
+/* Product.css - Main Product Page Styles */
+.product-page {
+    overflow: hidden;
+}
+
+/* Common Container Styles */
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
 }
 
 .section-header-center {
@@ -38,9 +43,28 @@
     line-height: 1.6;
 }
 
-/* Bootstrap Icons alignment */
-.bi {
-    vertical-align: middle;
+.text-gradient {
+    background: linear-gradient(135deg, var(--accent-color), #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
 /* Responsive */
@@ -57,3 +81,4 @@
         font-size: 0.9rem;
     }
 }
+

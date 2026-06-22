@@ -14,8 +14,8 @@ const Navbar = () => {
     })
 
     const services = [
-        { name: 'GenAI Solutions', path: '/services/genai' },
-        { name: 'Product Development', path: '/services/product-development' },
+        // { name: 'GenAI Solutions', path: '/services/genai' },
+        { name: 'Product Development', path: '/services/products' },
         { name: 'AI & Data', path: '/services/ai-data' },
         { name: 'DevOps & Cloud', path: '/services/devops-cloud' },
         { name: 'Staff Augmentation', path: '/services/staff-augmentation' },
@@ -185,9 +185,9 @@ const Navbar = () => {
                         </ul>
                     </li>
 
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link to="/aws" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>AWS</Link>
-                    </li>
+                    </li> */}
                     
                     <li className="nav-item">
                         <Link to="/join" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Join CodeNepal</Link>

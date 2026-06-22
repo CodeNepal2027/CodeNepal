@@ -7,6 +7,7 @@
 }
 
 .nav-container {
+    height: var(--navbar-height);
     max-width: 1400px;
     margin: 0 auto;
     padding: 1rem 2rem;
