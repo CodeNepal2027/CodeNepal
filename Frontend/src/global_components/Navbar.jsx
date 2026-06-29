@@ -16,10 +16,10 @@ const Navbar = () => {
     const services = [
         // { name: 'GenAI Solutions', path: '/services/genai' },
         { name: 'Product Development', path: '/services/products' },
-        { name: 'AI & Data', path: '/services/ai-data' },
-        { name: 'DevOps & Cloud', path: '/services/devops-cloud' },
-        { name: 'Staff Augmentation', path: '/services/staff-augmentation' },
-        { name: 'Healthcare Technology', path: '/services/healthcare-tech' }
+        // { name: 'AI & Data', path: '/services/ai-data' },
+        // { name: 'DevOps & Cloud', path: '/services/devops-cloud' },
+        // { name: 'Staff Augmentation', path: '/services/staff-augmentation' },
+        // { name: 'Healthcare Technology', path: '/services/healthcare-tech' }
     ]
 
     const resources = [

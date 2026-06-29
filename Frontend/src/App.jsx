@@ -4,6 +4,7 @@ import Navbar from './global_components/Navbar'
 import Footer from './global_components/Footer'
 
 import { Home } from './home/Home_Import'
+import { Team } from './team/Team_Import'
 import { 
   Product_Route
 } from './products/Product_Import'
@@ -16,6 +17,7 @@ function App() {
         <main className="main-content">
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/join" element={<Team />} />
                 <Route path="/services/*" element={<Product_Route />} />
             </Routes>
         </main>
